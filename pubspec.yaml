@@ -1,0 +1,42 @@
+name: health_summary
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=3.4.1 <4.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.6
+  get: 4.6.6
+  iconsax: ^0.0.8
+  google_fonts: ^6.1.0
+  flutter_screenutil: ^5.9.3
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
+
+  flutter: 
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_lints: ^3.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/color/
+
+  fonts:
+    - family: Gothic
+      fonts:
+        - asset: assets/fonts/gothicA1_regular.ttf
+          weight: 500
+
+flutter_gen:
+  colors:
+    inputs:
+      - assets/color/colors.xml

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray_70">#EEEEEE</color>
+    <color name="gray_410">#979797</color>
+    <color name="crimson_red" type="material">#f22952</color>
+    <color name="yellow_ocher" type="material material-accent">#DF9527</color>
+
+    <color name="onPrimary">#2575fc</color>
+    <color name="amber">#FFBF00</color>
+    <color name="pest">#06F8F4</color>
+    <color name="primaryColor">#2575fc</color>
+    <color name="bgColor">#F7F8FC</color>
+    <color name="bgColorWhite">#ECECEC</color>
+    <color name="wrong_ans">#F65B51</color>
+
+    <color name="start">#F8F9C7</color>
+    <color name="end">#F2C1EA</color>
+    <color name="end2">#F0068139</color>
+    <color name="yellow">#F8E644</color>
+    <color name="green_low">#98D4B1</color>
+    <color name="green">#2DCC70</color>
+
+
+    <color name="gradient_start">#2575fc</color>
+    <color name="gradient_end">#154AD3</color>
+</resources>
