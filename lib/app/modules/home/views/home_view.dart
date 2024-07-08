@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,7 +7,6 @@ import '../../../../global/animations/fade_in.dart';
 import '../../../../global/app_card.dart';
 import '../../../../global/increasing_text.dart';
 import '../../../../global/progress_with_text.dart';
-import '../../../routes/app_pages.dart';
 import '../../profile/views/profile_view.dart';
 import '../controllers/home_controller.dart';
 
@@ -43,8 +41,8 @@ class HomeView extends GetView<HomeController> {
                   const Spacer(),
                   GestureDetector(
                     // onLongPress: () {
-                      // log('triggered');
-                      // setState(() {});
+                    // log('triggered');
+                    // setState(() {});
                     // },
                     onTap: () {
                       Navigator.push(
