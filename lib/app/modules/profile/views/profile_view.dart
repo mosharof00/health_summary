@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:health_summary/global/app_text_style.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../global/increasing_text.dart';
@@ -10,6 +11,7 @@ class ProfileView extends GetView<ProfileController> {
   const ProfileView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    ProfileController controller = Get.put(ProfileController());
     return Scaffold(
       body: Column(
         children: [
@@ -123,89 +125,41 @@ class ProfileView extends GetView<ProfileController> {
           const SizedBox(height: 40),
           Expanded(
             child: Container(
-              padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: const BorderRadius.vertical(
-                  top: Radius.circular(80),
+                padding: const EdgeInsets.only(top: 15, left: 20, right: 20),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: const BorderRadius.vertical(
+                    top: Radius.circular(80),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(.5),
+                      blurRadius: 100,
+                    ),
+                  ],
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(.5),
-                    blurRadius: 100,
-                  ),
-                ],
-              ),
-              child: Column(
-                children: [
-                  CupertinoButton(
-                    onPressed: () {},
-                    padding: EdgeInsets.zero,
-                    child: const ListTile(
-                      leading: Icon(
-                        Iconsax.verify5,
-                        size: 35,
-                        color: Colors.deepPurple,
-                      ),
-                      title: Text("Become a Pro Member"),
-                      trailing: Icon(
-                        Icons.arrow_forward_ios_rounded,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ),
-                  CupertinoButton(
-                    onPressed: () {},
-                    padding: EdgeInsets.zero,
-                    child: const ListTile(
-                      leading: Icon(
-                        Iconsax.activity,
-                        size: 30,
-                      ),
-                      title: Text("Become a Pro Member"),
-                      trailing: Icon(
-                        Icons.arrow_forward_ios_rounded,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ),
-                  CupertinoButton(
-                    onPressed: () {},
-                    padding: EdgeInsets.zero,
-                    child: const ListTile(
-                      leading: Icon(
-                        Iconsax.book,
-                        size: 30,
-                      ),
-                      title: Text("WorkOut Plans"),
-                      trailing: Icon(
-                        Icons.arrow_forward_ios_rounded,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ),
-                  CupertinoButton(
-                    onPressed: () {},
-                    padding: EdgeInsets.zero,
-                    child: ListTile(
-                      leading: Icon(
-                        Iconsax.message,
-                        size: 30,
-                        color: Colors.deepPurple.shade400,
-                      ),
-                      title: Text(
-                        "Help",
-                        style: TextStyle(color: Colors.deepPurple.shade400),
-                      ),
-                      trailing: const Icon(
-                        Icons.arrow_forward_ios_rounded,
-                        color: Colors.deepPurple,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+                child: ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: controller.optionTextList.length,
+                    itemBuilder: (context, index) {
+                      return CupertinoButton(
+                        onPressed: () {},
+                        padding: EdgeInsets.zero,
+                        child: ListTile(
+                          leading: Icon(
+                            controller.optionIconList[index],
+                            size: 35,
+                            color: Colors.deepPurple,
+                          ),
+                          title: AppTextStyle(
+                              text: controller.optionTextList[index]),
+                          trailing: Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      );
+                    })),
           ),
         ],
       ),
